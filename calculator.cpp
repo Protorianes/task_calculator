@@ -231,12 +231,5 @@ double factor(char *str, unsigned *idx)
     else
         result = number(str, idx);
  
-    if (str[*idx] == '^')
-    {
-        ++*idx;
- 
-        result = pow(result, factor(str, idx));
-    }
- 
     return sign * result;
 }
